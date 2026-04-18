@@ -1,0 +1,68 @@
+# Dependencies
+node_modules/
+__pycache__/
+*.pyc
+
+# Environment variables (CONFIDENTIAL)
+.env
+.env.local
+.env.*.local
+.env.production
+.env.development
+
+# API Keys and Secrets (CONFIDENTIAL)
+*.pem
+*.key
+*.cert
+secrets/
+credentials/
+
+# Build outputs
+dist/
+build/
+
+# Uploads (user uploaded files)
+server/uploads/
+!server/uploads/.gitkeep
+
+# ML model files (can be regenerated)
+ml-service/model/*.pkl
+ml-service/model/*.joblib
+!ml-service/model/.gitkeep
+
+# Training data (large files, can be regenerated)
+ml-service/data/*.csv
+!ml-service/data/.gitkeep
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+
+# Database
+*.mongodb
+
+# Temporary files
+tmp/
+temp/
+*.tmp
+
+# Testing
+coverage/
+.nyc_output/
+
+# Python virtual environment
+.venv/
+venv/
+env/
+ENV/

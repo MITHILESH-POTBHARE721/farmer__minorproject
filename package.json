@@ -1,0 +1,28 @@
+{
+  "name": "smart-agriculture-platform",
+  "version": "1.0.0",
+  "description": "Full-stack Smart Agriculture Platform with AI/ML crop prediction",
+  "private": true,
+  "scripts": {
+    "install:all": "npm install && cd server && npm install && cd ../client && npm install && cd ../ml-service && pip install -r requirements.txt",
+    "dev": "concurrently \"npm run server\" \"npm run client\" \"npm run ml\"",
+    "server": "cd server && npm run dev",
+    "client": "cd client && npm run dev",
+    "ml": "cd ml-service && python app.py",
+    "train-model": "cd ml-service && python train_model.py",
+    "seed": "cd server && npm run seed",
+    "build": "cd client && npm run build"
+  },
+  "keywords": [
+    "agriculture",
+    "mern",
+    "machine-learning",
+    "crop-prediction",
+    "marketplace"
+  ],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
