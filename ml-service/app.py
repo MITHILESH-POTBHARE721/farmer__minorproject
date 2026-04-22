@@ -6,8 +6,9 @@ import requests
 import os
 from dotenv import load_dotenv
 
-# Load environment variables
-load_dotenv()
+# Load environment variables (only in development, not on Render)
+if os.path.exists('.env') and not os.getenv('RENDER'):
+    load_dotenv()
 
 app = Flask(__name__)
 CORS(app)
