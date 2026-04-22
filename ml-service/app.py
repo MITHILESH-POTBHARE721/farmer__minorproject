@@ -233,5 +233,5 @@ def get_crops():
 
 if __name__ == '__main__':
     load_model()
-    port = int(os.getenv('PORT', 5001))
-    app.run(host='0.0.0.0', port=port, debug=True)
+    port = int(os.getenv('PORT', 10000))
+    app.run(host='0.0.0.0', port=port, debug=False)
